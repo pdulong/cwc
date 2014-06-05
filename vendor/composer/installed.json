@@ -1744,5 +1744,64 @@
             "payment processing",
             "stripe"
         ]
+    },
+    {
+        "name": "laravel/cashier",
+        "version": "v2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laravel/cashier.git",
+            "reference": "3f4d42e7b23a1125c3f1b501c62017133596ffba"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laravel/cashier/zipball/3f4d42e7b23a1125c3f1b501c62017133596ffba",
+            "reference": "3f4d42e7b23a1125c3f1b501c62017133596ffba",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/filesystem": "~4.1",
+            "illuminate/support": "~4.1",
+            "nesbot/carbon": "~1.0",
+            "php": ">=5.4.0",
+            "stripe/stripe-php": "~1.9",
+            "symfony/http-kernel": "~2.3"
+        },
+        "require-dev": {
+            "illuminate/view": "~4.1",
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "4.0.*"
+        },
+        "time": "2014-05-30 20:24:12",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Laravel\\Cashier\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylorotwell@gmail.com",
+                "homepage": "https://github.com/taylorotwell",
+                "role": "Creator of Laravel"
+            }
+        ],
+        "keywords": [
+            "billing",
+            "laravel",
+            "stripe"
+        ]
     }
 ]
