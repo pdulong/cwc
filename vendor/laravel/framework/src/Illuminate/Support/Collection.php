@@ -148,6 +148,16 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	}
 
 	/**
+	 * Flip the items in the collection.
+	 *
+	 * @return \Illuminate\Support\Collection
+	 */
+	public function flip()
+	{
+		return new static(array_flip($this->items));
+	}
+
+	/**
 	 * Remove an item from the collection by key.
 	 *
 	 * @param  mixed  $key
@@ -239,6 +249,16 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	public function isEmpty()
 	{
 		return empty($this->items);
+	}
+
+	/**
+	 * Get the keys of the collection items.
+	 *
+	 * @return array
+	 */
+	public function keys()
+	{
+		return array_keys($this->items);
 	}
 
 	/**
@@ -342,6 +362,19 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	}
 
 	/**
+	 * Get one or more items randomly from the collection.
+	 *
+	 * @param  int $amount
+	 * @return mixed
+	 */
+	public function random($amount = 1)
+	{
+		$keys = array_rand($this->items, $amount);
+
+		return is_array($keys) ? array_intersect_key($this->items, array_flip($keys)) : $this->items[$keys];
+	}
+
+	/**
 	 * Reduce the collection to a single value.
 	 *
 	 * @param  callable  $callback
@@ -354,16 +387,31 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	}
 
 	/**
-	 * Get one or more items randomly from the collection.
+	 * Create a colleciton of all elements that do not pass a given truth test.
 	 *
-	 * @param  int $amount
-	 * @return mixed
+	 * @param  \Closure|mixed  $callback
+	 * @return \Illuminate\Support\Collection
 	 */
-	public function random($amount = 1)
+	public function reject($callback)
 	{
-		$keys = array_rand($this->items, $amount);
+		$results = [];
 
-		return is_array($keys) ? array_intersect_key($this->items, array_flip($keys)) : $this->items[$keys];
+		foreach ($this->items as $key => $value)
+		{
+			if ($callback instanceof Closure)
+			{
+				if ( ! $callback($value))
+				{
+					$results[$key] = $value;
+				}
+			}
+			elseif ($callback != $value)
+			{
+				$results[$key] = $value;
+			}
+		}
+
+		return new static($results);
 	}
 
 	/**

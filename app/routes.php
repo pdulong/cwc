@@ -13,6 +13,19 @@
 
 Route::pattern('id', '[0-9]+');
 
+Route::get('/', function(){
+	echo 'Show products here';
+});
+
+Route::controller('products', 'ProductController');
+Route::controller('orders', 'OrderController');
+
+Route::get('login/{intended?}', array('uses' => 'LoginController@showLogin'));
+Route::post('login', array('uses' => 'LoginController@doLogin'));
+Route::get('logout', array('uses' => 'LoginController@doLogout'));
+
+Route::get('pay/{order}', array('uses' => 'OrderController@pay'));
+
 Route::get('home', function()
 {
 	$users = User::all();
@@ -21,3 +34,6 @@ Route::get('home', function()
 });
 
 Route::get('user/{id}', 'UserController@showProfile');
+
+
+Route::resource('signup', 'SignupController');

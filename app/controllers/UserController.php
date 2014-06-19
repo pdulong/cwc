@@ -2,8 +2,6 @@
 
 class UserController extends BaseController{
 
-	protected $layout = 'layouts.master';
-
 	//Show the profile of a user
 
 	public function showProfile($id)

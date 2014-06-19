@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'CryptoWaveCap!!!',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 

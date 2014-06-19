@@ -25,7 +25,7 @@ return array(
 
 	'stripe' => array(
 		'model'  => 'User',
-		'secret' => '',
+		'secret' => 'sk_test_zn8kcP2FSaFUlzlI6HAINwOc',
 	),
 
 );

@@ -83,8 +83,8 @@ return array(
 	*/
 
 	'custom' => array(
-		'attribute-name' => array(
-			'rule-name' => 'custom-message',
+		'av' => array(
+			'required' => 'Please accept our terms & conditions',
 		),
 	),
 
@@ -99,6 +99,10 @@ return array(
 	|
 	*/
 
-	'attributes' => array(),
+	'attributes' => array(
+		'firstname' => 'first name',
+		'lastname' => 'last name',
+		'av' => 'terms & conditions',
+	),
 
 );

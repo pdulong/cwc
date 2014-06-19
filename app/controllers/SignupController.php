@@ -1,0 +1,24 @@
+<?php
+
+class SignupController extends BaseController{
+
+//	protected $layout = 'masters.master';
+
+    public function index( ){
+        if( Auth::check() )
+            return Redirect::to("/");
+
+        return View::make('signup');
+    }
+
+    public function store(){
+        $user = new User;
+        $user->email = Input::get( 'email' );
+        $user->password = Hash::make( Input::get( 'password' ) );
+        $user->save();
+        $user->subscription(Input::get( 'subscription' ))->create( Input::get( 'stripeToken' ) );
+
+        return 'you are now registred';
+    }
+
+}
