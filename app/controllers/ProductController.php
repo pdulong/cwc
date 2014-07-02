@@ -10,12 +10,12 @@ class ProductController extends BaseController{
 
 		$products = Product::all();
 
+		$mainPrice = Product::orderBy('price_per_hash','asc')->first()->price_per_hash;
 
-
-		//{{ $this -> currency(($product -> price_per_hash * $product -> hash)) }}
-
-		return View::make('products')
-			->with('products', $products);
+		return View::make('products', array(
+			'cheapestPrice'	=> $mainPrice,
+			'thisMonthRev' => 2019,
+		))->with('products', $products);
 	}
 
 	public function getProduct( $id = 1 ){

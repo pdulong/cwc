@@ -30,8 +30,8 @@
             <p>{{trans('interface.intro_desc')}}</p>
 
             <div class="button_buy">
-                <a href="#pricing" class="gradient" title="{{trans('interface.home_buyMc')}}"><span class="button_price">&euro; 59</span> <span class="button_text">{{trans('interface.home_buyMcFull')}}</span></a>
-                <p class="hint">{{trans('interface.intro_hint', array('return' => '&euro; 25,20'))}}</p>
+                <a href="#pricing" class="gradient" title="{{trans('interface.home_buyMc')}}"><span class="button_price">&euro; {{Product::formatCurrency($cheapestPrice)}}</span> <span class="button_text">{{trans('interface.home_buyMcFull')}}</span></a>
+                <p class="hint">{{trans('interface.intro_hint', array('return' => '&euro; ' . Product::formatCurrency(2520)))}}</p>
             </div>
         </div>
     </div>
@@ -158,7 +158,7 @@
                         </div>
 
                         <div class="pricing">
-                            <p class="price"><span>&euro;</span>29,20</p>
+                            <p class="price"><span>&euro;</span>{{Product::formatCurrency(2925)}}</p>
 
                             <p class="price_sub">{{trans('interface.hp_profitCert')}}</p>
                         </div>
@@ -175,7 +175,7 @@
                         </div>
 
                         <div class="pricing">
-                            <p class="price"><span>&euro;</span>25,20</p>
+                            <p class="price"><span>&euro;</span> {{Product::formatCurrency(2520)}}</p>
 
                             <p class="price_sub">{{trans('interface.hp_profitCert')}}</p>
                         </div>
@@ -221,7 +221,7 @@
                         <ul>
                             <li>{{ $product -> hash }} {{{ ( $product -> hash > 1)?trans('interface.buy_certificate_plural'):trans('interface.buy_certificate_single') }}}</li>
                             <li>{{trans('interface.hp_expect')}}:</li>
-                            <li class="last">&euro; 250 euro</li>
+                            <li class="last">&euro; {{ Product::formatCurrency($product -> hash * $thisMonthRev * 12)}} *</li>
                         </ul><a href="{{ action('OrderController@getBuy', array('product' => $product -> id)) }}" class="button_buy_table gradient">{{trans('interface.hp_buy_now')}}</a>
                     </div>
 
@@ -248,8 +248,8 @@
                 </div>
 
                 <div class="button_buy">
-                    <a href="#pricing" class="gradient" title="{{trans('interface.home_buyMc')}}"><span class="button_price">&euro; 49</span> <span class="button_text">{{trans('interface.home_buyMcFull')}}</span></a>
-                    <p class="hint" style="color: black;">{{trans('interface.intro_hint', array('return' => '&euro; 25,20'))}}</p>
+                    <a href="#pricing" class="gradient" title="{{trans('interface.home_buyMc')}}"><span class="button_price">&euro; {{Product::formatCurrency($cheapestPrice)}}</span> <span class="button_text">{{trans('interface.home_buyMcFull')}}</span></a>
+                    <p class="hint" style="color: black;">{{trans('interface.intro_hint', array('return' => '&euro; ' . Product::formatCurrency(2520) ))}}</p>
                 </div>
             </div>
         </section>
