@@ -1468,56 +1468,6 @@
         ]
     },
     {
-        "name": "stripe/stripe-php",
-        "version": "v1.16.0",
-        "version_normalized": "1.16.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/stripe/stripe-php.git",
-            "reference": "9401a361fa0323935002aa96f46983f9ecd880bb"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/stripe/stripe-php/zipball/9401a361fa0323935002aa96f46983f9ecd880bb",
-            "reference": "9401a361fa0323935002aa96f46983f9ecd880bb",
-            "shasum": ""
-        },
-        "require": {
-            "ext-curl": "*",
-            "ext-json": "*",
-            "ext-mbstring": "*",
-            "php": ">=5.2"
-        },
-        "require-dev": {
-            "simpletest/simpletest": "*"
-        },
-        "time": "2014-06-18 00:21:25",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "lib/Stripe/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Stripe and contributors",
-                "homepage": "https://github.com/stripe/stripe-php/contributors"
-            }
-        ],
-        "description": "Stripe PHP Library",
-        "homepage": "https://stripe.com/",
-        "keywords": [
-            "api",
-            "payment processing",
-            "stripe"
-        ]
-    },
-    {
         "name": "swiftmailer/swiftmailer",
         "version": "v5.2.1",
         "version_normalized": "5.2.1.0",
@@ -1627,18 +1577,75 @@
         ]
     },
     {
-        "name": "laravel/framework",
-        "version": "v4.2.4",
-        "version_normalized": "4.2.4.0",
+        "name": "mollie/mollie-api-php",
+        "version": "1.1.5",
+        "version_normalized": "1.1.5.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/laravel/framework.git",
-            "reference": "ee370ac91ee0a51303765c870e139b1ecd1e222c"
+            "url": "https://github.com/mollie/mollie-api-php.git",
+            "reference": "1096a8cf288269a7a91a2a0b8b6b8bb5d9e017c2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/ee370ac91ee0a51303765c870e139b1ecd1e222c",
-            "reference": "ee370ac91ee0a51303765c870e139b1ecd1e222c",
+            "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/1096a8cf288269a7a91a2a0b8b6b8bb5d9e017c2",
+            "reference": "1096a8cf288269a7a91a2a0b8b6b8bb5d9e017c2",
+            "shasum": ""
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2014-06-23 14:26:14",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Mollie B.V.",
+                "email": "info@mollie.nl",
+                "role": "Source files"
+            }
+        ],
+        "description": "Mollie API client library for PHP",
+        "homepage": "https://github.com/mollie/mollie-api-php",
+        "keywords": [
+            "bancontact",
+            "bitcoin",
+            "creditcard",
+            "gateway",
+            "ideal",
+            "mistercash",
+            "mollie",
+            "payment",
+            "payments",
+            "paypal",
+            "paysafecard",
+            "sepa",
+            "service",
+            "sofort",
+            "sofortbanking"
+        ]
+    },
+    {
+        "name": "laravel/framework",
+        "version": "v4.2.6",
+        "version_normalized": "4.2.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laravel/framework.git",
+            "reference": "2e73cd58ee42919166a51897b965e1135b85048c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/2e73cd58ee42919166a51897b965e1135b85048c",
+            "reference": "2e73cd58ee42919166a51897b965e1135b85048c",
             "shasum": ""
         },
         "require": {
@@ -1708,7 +1715,7 @@
         "suggest": {
             "doctrine/dbal": "Allow renaming columns and dropping SQLite columns."
         },
-        "time": "2014-06-18 05:07:22",
+        "time": "2014-06-29 00:16:51",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1746,45 +1753,36 @@
         ]
     },
     {
-        "name": "laravel/cashier",
-        "version": "v2.0.1",
-        "version_normalized": "2.0.1.0",
+        "name": "mcamara/laravel-localization",
+        "version": "0.14.0",
+        "version_normalized": "0.14.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/laravel/cashier.git",
-            "reference": "c03a5e963adf5248166b08c8fe9e2f1b56df34b9"
+            "url": "https://github.com/mcamara/laravel-localization.git",
+            "reference": "5bfb496b3abf5ee467f2a3f387c517f55314e26d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/cashier/zipball/c03a5e963adf5248166b08c8fe9e2f1b56df34b9",
-            "reference": "c03a5e963adf5248166b08c8fe9e2f1b56df34b9",
+            "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/5bfb496b3abf5ee467f2a3f387c517f55314e26d",
+            "reference": "5bfb496b3abf5ee467f2a3f387c517f55314e26d",
             "shasum": ""
         },
         "require": {
-            "illuminate/filesystem": "~4.1",
-            "illuminate/support": "~4.1",
-            "nesbot/carbon": "~1.0",
-            "php": ">=5.4.0",
-            "stripe/stripe-php": "~1.9",
-            "symfony/http-kernel": "~2.3"
+            "laravel/framework": "4.2.*",
+            "php": ">=5.4.0"
         },
         "require-dev": {
-            "illuminate/routing": "~4.1",
-            "illuminate/view": "~4.1",
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "~4.0"
+            "orchestra/testbench": "2.2.*"
         },
-        "time": "2014-06-13 20:08:19",
+        "time": "2014-06-02 15:51:19",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.1-dev"
-            }
-        },
         "installation-source": "dist",
         "autoload": {
+            "classmap": [
+
+            ],
             "psr-0": {
-                "Laravel\\Cashier\\": "src/"
+                "Mcamara\\LaravelLocalization": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -1793,70 +1791,67 @@
         ],
         "authors": [
             {
-                "name": "Taylor Otwell",
-                "email": "taylorotwell@gmail.com",
-                "homepage": "https://github.com/taylorotwell",
-                "role": "Creator of Laravel"
+                "name": "Marc Cámara",
+                "email": "mcamara88@gmail.com",
+                "role": "Developer"
             }
         ],
+        "description": "Easy localization for Laravel 4",
+        "homepage": "https://github.com/mcamara/laravel-localization",
         "keywords": [
-            "billing",
             "laravel",
-            "stripe"
+            "localization",
+            "php"
         ]
     },
     {
-        "name": "mollie/mollie-api-php",
-        "version": "1.1.4",
-        "version_normalized": "1.1.4.0",
+        "name": "stripe/stripe-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/mollie/mollie-api-php.git",
-            "reference": "9943bae7c1b655cf1d1f5deb86d0d98d23789d14"
+            "url": "https://github.com/stripe/stripe-php.git",
+            "reference": "a2030856acdf6eece0a75f46068bff32c758f351"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/9943bae7c1b655cf1d1f5deb86d0d98d23789d14",
-            "reference": "9943bae7c1b655cf1d1f5deb86d0d98d23789d14",
+            "url": "https://api.github.com/repos/stripe/stripe-php/zipball/a2030856acdf6eece0a75f46068bff32c758f351",
+            "reference": "a2030856acdf6eece0a75f46068bff32c758f351",
             "shasum": ""
         },
-        "require-dev": {
-            "phpunit/phpunit": "3.7.*"
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "php": ">=5.2"
         },
-        "time": "2014-05-15 10:11:29",
+        "require-dev": {
+            "simpletest/simpletest": "*"
+        },
+        "time": "2014-07-02 03:33:58",
         "type": "library",
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
-            "psr-0": {
-                "": "src/"
-            }
+            "classmap": [
+                "lib/Stripe/"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "BSD-2-Clause"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Mollie B.V.",
-                "email": "info@mollie.nl",
-                "role": "Source files"
+                "name": "Stripe and contributors",
+                "homepage": "https://github.com/stripe/stripe-php/contributors"
             }
         ],
-        "description": "Mollie API client library for PHP",
-        "homepage": "https://github.com/mollie/mollie-api-php",
+        "description": "Stripe PHP Library",
+        "homepage": "https://stripe.com/",
         "keywords": [
-            "bitcoin",
-            "creditcard",
-            "gateway",
-            "ideal",
-            "mistercash",
-            "mollie",
-            "payment",
-            "payments",
-            "paypal",
-            "paysafecard",
-            "sepa",
-            "service"
+            "api",
+            "payment processing",
+            "stripe"
         ]
     }
 ]

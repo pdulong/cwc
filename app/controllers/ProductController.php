@@ -10,6 +10,10 @@ class ProductController extends BaseController{
 
 		$products = Product::all();
 
+
+
+		//{{ $this -> currency(($product -> price_per_hash * $product -> hash)) }}
+
 		return View::make('products')
 			->with('products', $products);
 	}
@@ -19,5 +23,10 @@ class ProductController extends BaseController{
 		//$data['products'] = Product::lists('nameSlug', 'id');
 
 
+	}
+
+	public function currency( $input = 0 )
+	{
+		return $input / 100;
 	}
 }

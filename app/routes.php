@@ -11,29 +11,33 @@
 |
 */
 
-Route::pattern('id', '[0-9]+');
+Route::group(array('prefix' => LaravelLocalization::setLocale()), function(){
+	Route::pattern('id', '[0-9]+');
 
-Route::get('/', function(){
-	echo 'Show products here';
+	Route::get('/', function(){
+	});
+
+	Route::controller('products', 'ProductController');
+	Route::controller('orders', 'OrderController');
+
+	Route::get('login/{intended?}', array('uses' => 'LoginController@showLogin'));
+	Route::get('aff/{affiliate?}', array('uses' => 'OrderController@getAffiliate'));
+	Route::post('login', array('uses' => 'LoginController@doLogin'));
+	Route::get('logout', array('uses' => 'LoginController@doLogout'));
+
+	Route::get('pay/{order}', array('uses' => 'OrderController@pay'));
+	Route::get('complete/{order}', array('uses' => 'OrderController@complete'));
+	Route::post('complete_creditcard/{order}', array('uses' => 'OrderController@stripe_save'));
+
+	Route::get('home', function()
+	{
+		$users = User::all();
+
+	    return View::make('home')->with('users', $users);
+	});
+
+	Route::get('user/{id}', 'UserController@showProfile');
+
+
+	Route::resource('signup', 'SignupController');
 });
-
-Route::controller('products', 'ProductController');
-Route::controller('orders', 'OrderController');
-
-Route::get('login/{intended?}', array('uses' => 'LoginController@showLogin'));
-Route::post('login', array('uses' => 'LoginController@doLogin'));
-Route::get('logout', array('uses' => 'LoginController@doLogout'));
-
-Route::get('pay/{order}', array('uses' => 'OrderController@pay'));
-
-Route::get('home', function()
-{
-	$users = User::all();
-
-    return View::make('home')->with('users', $users);
-});
-
-Route::get('user/{id}', 'UserController@showProfile');
-
-
-Route::resource('signup', 'SignupController');

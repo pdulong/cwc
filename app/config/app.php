@@ -121,8 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Laravel\Cashier\CashierServiceProvider',
-
+		'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider',
 	),
 
 	/*
@@ -189,6 +188,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'LaravelLocalization'   => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization',
 
 	),
 

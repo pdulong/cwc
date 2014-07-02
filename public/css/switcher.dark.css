@@ -1,0 +1,113 @@
+/* * SWITCHER STYLES
+ */
+#switcher {
+	width: 250px;
+
+	margin: 25px;
+
+	position: relative;
+	z-index: 5000;
+}
+
+	/* * SWITCHER SELECTED
+	 */
+	#switcher > .selected {
+		height: 40px;
+
+		padding: 15px;
+
+		/* 2px (for "#switcher > .dropdown") */
+		border-left: 2px solid transparent;
+		border-right: 2px solid transparent;
+		/* 2px (for "#switcher > .dropdown") + 2px (for "#switcher > .dropdown > li a") = 4px */
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+
+		background-color: #393939;
+	}
+	#switcher > .selected a > img {border: 0;}
+
+		/* * SWITCHER LOADER
+		 */
+		#switcher > .selected img.loader {
+			margin-top: 12px;
+			margin-left: 100px;
+		}
+
+		#switcher > .selected .loader {
+			margin-top: 8px;
+			margin-left: 50px;
+
+			font-size: 1.25em;
+			font-weight: bold;
+			letter-spacing: 0.1em;
+			color: #fbfbfb;
+			text-transform: uppercase;
+		}
+
+
+	/* * SWITCHER DROPDOWN
+	 */
+	#switcher > .dropdown {
+		display: none;
+
+		list-style: none;
+
+		width: 100%;
+
+		margin: 0;
+		padding: 0;
+
+		position: absolute;
+		top: 0;
+		z-index: 5001;
+
+		border: 2px solid #1f1f1f;
+	}
+
+	#switcher > .dropdown > li a, #switcher .dropdown > li a:visited {
+		display: block;
+
+		height: 40px;
+
+		padding: 15px;
+
+		border-top: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+
+		background-color: #222;
+	}
+	#switcher > .dropdown > li a > img {border: 0;}
+
+	#switcher > .dropdown > li a:hover, #switcher .dropdown > li a:visited:hover {
+		border-top: 2px solid #1f1f1f;
+		border-bottom: 2px solid #1f1f1f;
+
+		background-color: #2f2f2f;
+	}
+
+		/* * DROPDOWN; ACTIVE LINK
+		 */
+		#switcher > .dropdown > li a.active, #switcher > .dropdown > li a.active:visited,
+		#switcher > .dropdown > li a.active:visited:hover, #switcher > .dropdown > li a.active:hover {
+			border-top: 2px solid transparent;
+			border-bottom: 2px solid transparent;
+
+			background-color: #3c3d3b;
+		}
+
+
+	/* * SWITCHER TOGGLE
+	 */
+	#switcher > .toggleControl {
+		width: 13px;
+		height: 21px;
+
+		background: url(../images/btn-switch.png) 0 0 no-repeat;
+
+		position: absolute;
+		top: 25px;
+		right: 10px;
+		z-index: 5002
+	}
+	#switcher > .toggleControl:hover {background-position: 0 -21px; cursor: pointer;}

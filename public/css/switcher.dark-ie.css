@@ -1,0 +1,32 @@
+/* * SWITCHER SELECTED
+ */
+#switcher > .selected {
+	/* 
+		need to shift pixels back, so;
+		border-right will be negated sum of border-right and border-left (e.g. -(2+2) = -4)
+		border-top and border-bottom will be the negated values of the original 
+	*/
+	margin: -4px -4px -4px 0;
+	
+	border-color: #393939;
+}
+
+
+/* * SWITCHER DROPDOWN
+ */
+#switcher > .dropdown > li a, #switcher .dropdown > li a:visited {
+	margin: -4px 0;
+	
+	border-color: #222;
+}
+
+#switcher > .dropdown > li a:hover, #switcher .dropdown > li a:visited:hover {
+	border-color: #1f1f1f;
+}
+
+	/* * DROPDOWN; ACTIVE LINK
+	 */
+	#switcher > .dropdown > li a.active, #switcher > .dropdown > li a.active:visited,
+	#switcher > .dropdown > li a.active:visited:hover, #switcher > .dropdown > li a.active:hover {
+		border-color: #1f1f1f;
+	}

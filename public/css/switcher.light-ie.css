@@ -1,0 +1,19 @@
+/* * switcher-light SELECTED
+ */
+#switcher-light > .selected {
+	/* 
+		need to shift pixels back, so;
+		border-right will be negated sum of border-right and border-left (e.g. -(3+3) = -6)
+		border-top and border-bottom will be the negated values of the original 
+	*/
+	margin: -3px -6px -3px 3px;
+}
+
+
+/* * switcher-light DROPDOWN
+ */
+#switcher-light > .dropdown > li a, #switcher-light .dropdown > li a:visited {
+	margin: 0 0 -3px 0;
+	
+	border-color: #ededed;
+}

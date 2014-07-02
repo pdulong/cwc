@@ -1,0 +1,103 @@
+/* * SWITCHER STYLES
+ */
+#switcher-light {
+	width: 250px;
+
+	margin: 25px;
+
+	position: relative;
+	z-index: 4000;
+}
+
+#switcher-light:hover, #switcher-light > .toggleControl:hover {
+	background-color: #e6e6e6;
+
+	cursor: pointer;
+}
+
+	/* * SWITCHER SELECTED
+	 */
+	#switcher-light > .selected {
+		height: 40px;
+
+		padding: 15px;
+
+		/* 3px (for "#switcher-light > .dropdown") */
+		border: 3px solid transparent;
+	}
+	#switcher-light > .selected a > img {border: 0;}
+
+		/* * SWITCHER LOADER
+		 */
+		#switcher-light > .selected img.loader {
+			margin-top: 12px;
+			margin-left: 100px;
+		}
+
+		#switcher-light > .selected .loader {
+			margin-top: 8px;
+			margin-left: 50px;
+
+			font-size: 1.25em;
+			font-weight: bold;
+			letter-spacing: 0.1em;
+			color: #fbfbfb;
+			text-transform: uppercase;
+		}
+
+
+	/* * SWITCHER DROPDOWN
+	 */
+	#switcher-light > .dropdown {
+		display: none;
+
+		list-style: none;
+
+		width: 100%;
+
+		margin: 0;
+		padding: 0;
+
+		position: absolute;
+		top: 0;
+		z-index: 4001;
+
+		border: 3px solid #d1d1d1;
+	}
+
+	#switcher-light > .dropdown > li a, #switcher-light .dropdown > li a:visited {
+		display: block;
+
+		height: 40px;
+
+		padding: 15px;
+
+		background-color: #ededed;
+	}
+	#switcher-light > .dropdown > li a > img {border: 0;}
+
+	#switcher-light > .dropdown > li a:hover, #switcher-light .dropdown > li a:visited:hover {
+		background-color: #dedede;
+	}
+
+		/* * DROPDOWN; ACTIVE LINK
+		 */
+		#switcher-light > .dropdown > li a.active, #switcher-light > .dropdown > li a.active:visited,
+		#switcher-light > .dropdown > li a.active:visited:hover, #switcher-light > .dropdown > li a.active:hover {
+			background-color: #d1d1d1;
+		}
+
+
+	/* * SWITCHER TOGGLE
+	 */
+	#switcher-light > .toggleControl {
+		width: 13px;
+		height: 21px;
+
+		background: url(../images/btn-switch.png) 0 -21px no-repeat;
+
+		position: absolute;
+		top: 25px;
+		right: 10px;
+		z-index: 4002;
+	}

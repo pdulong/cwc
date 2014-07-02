@@ -5,8 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"laravel/cashier": "~2.0",
-		"mollie/mollie-api-php": "1.1.*"
+		"mollie/mollie-api-php": "1.1.*",
+		"stripe/stripe-php": "dev-master",
+		"mcamara/laravel-localization": "0.14.*"
 	},
 	"autoload": {
 		"classmap": [

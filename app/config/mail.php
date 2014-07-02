@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'tls://email-smtp.us-east-1.amazonaws.com',
+	'host' => 'email-smtp.us-east-1.amazonaws.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -119,6 +119,6 @@ return array(
 	|
 	*/
 
-	'pretend' => true,
+	'pretend' => false,
 
 );

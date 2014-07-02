@@ -1,10 +1,16 @@
-@extends("masters.default")
+@extends('masters.default_single')
 
 @section('content')
 
+<section>
+<div class="row">
+
+
 	{{ Form::open(array('url' => 'login')) }}
 
-		<h1>Login</h1>
+		<h1>{{trans('interface.login')}}</h1>
+
+		<p>{{trans('interface.login_desc')}}</p>
 
 		<ul>
 	        @foreach($errors->all() as $error)
@@ -12,21 +18,23 @@
 	        @endforeach
 	    </ul>
 
-	    <p>
-	    	{{ Form::label('email', 'Email-address') }}
-	    	{{ Form::text('email', null, array('placeholder' => 'info@youremail.com') )}}
-	    </p>
+		<div class="fieldRow">
+			{{ Form::label('email', trans('interface.form_email')) }}
+	    	{{ Form::text('email', null, array('placeholder' => trans('interface.form_email')) )}}
+	    </div>
 
-	    <p>
-	    	{{ Form::label('password', 'Password') }}
+	    <div class="fieldRow">
+	    	{{ Form::label('password', trans('interface.form_password')) }}
 	    	{{ Form::password('password') }}
-	    </p>
+	    </div>
 
-	    <p>
+	    <div class="fieldRow">
 	    	{{ Form::hidden('intended', $intended) }}
-	    	{{ Form::submit('Submit') }}
-	    </p>
+	    </div>
+	    	{{ Form::submit(trans('interface.login'), array('id' => 'submit')) }}
 
 	{{ Form::close() }}
+
+</div></section>
 
 @stop

@@ -4,12 +4,10 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
-use Laravel\Cashier\BillableInterface;
-use Laravel\Cashier\BillableTrait;
 
-class User extends Eloquent implements UserInterface, RemindableInterface, BillableInterface {
+class User extends Eloquent implements UserInterface, RemindableInterface{
 
-use UserTrait, RemindableTrait, BillableTrait;
+use UserTrait, RemindableTrait;
 
 	/**
 	 * The database table used by the model.
@@ -28,12 +26,11 @@ use UserTrait, RemindableTrait, BillableTrait;
 	protected $fillable = array('email','first_name','last_name','address','postal','country','telephone','password');
 
 	public static $rulesRegistration = array(
-		'firstname'                => 'required|alpha|min:2',
-	    'lastname'                 => 'required|alpha|min:2',
+		'firstname'                => 'required|min:2',
+	    'lastname'                 => 'required|min:2',
 	    'email'                    => 'required|email|unique:users,email',
 	    'password'                 => 'required|alpha_num|between:6,12|confirmed',
 	    'password_confirmation'    => 'required|alpha_num|between:6,12',
-	    'telephone'                => 'required',
 	    'address'                  => 'required',
 	    'postal'                   => 'required',
 	    'country'                  => 'required',
