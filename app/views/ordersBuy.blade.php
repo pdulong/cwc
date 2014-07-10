@@ -44,7 +44,7 @@ $( document ).ready(function() {
     	@foreach( $products as $index => $product )
 			<tr class="@if($index % 2) odd @elseif($productActive == $product -> id) favorite @endif">
 	    		<td><input type="radio" value="{{ $product -> id }}" name="product" @if($productActive == $product -> id) checked="checked" @endif></td>
-	    		<td>{{ trans('interface.productName_'.$product -> nameSlug) }}</td> <td>{{ $product -> hash }} {{trans('interface.buy_certificate')}}{{ ($product -> hash==1)?'':'s' }} x &euro; {{ Product::formatCurrency($product -> price_per_hash) }}</td>
+	    		<td>{{ trans('interface.productName_'.$product -> nameSlug) }}</td> <td>{{ $product -> hash }} {{ ($product -> hash==1)?trans('interface.buy_certificate'):trans('interface.buy_certificate_plural') }} x &euro; {{ Product::formatCurrency($product -> price_per_hash) }}</td>
 	    		<td>&euro; {{ Product::formatCurrency($product -> price_per_hash*$product ->hash) }}</td>
 	    	</tr>
     	@endforeach
@@ -110,7 +110,7 @@ $( document ).ready(function() {
 		    {{ Form::select('country', $countries) }}
 	    </div>
 
-	     <div class="fieldRow">
+	    <div class="fieldRow">
 			{{ Form::label('telephone', trans('interface.form_telephone')); }}
 		    {{ Form::text('telephone', null, array('placeholder' => trans('interface.form_telephone'))) }}
 	    </div>
@@ -128,10 +128,10 @@ $( document ).ready(function() {
     </div>
 
     <h2 class="paddingAbove">{{trans('interface.buy_tc')}}</h2>
-    <p>{{trans('interface.buy_tcDesc')}} <a href="#">{{strtolower(trans('interface.buy_tc'))}}</a></p>
+    <p>{{trans('interface.buy_tcDesc')}} <a href="{{ URL::to('av', array('language' => App::getLocale())) }}" target="_blank">{{strtolower(trans('interface.buy_tc'))}}</a></p>
     {{ Form::checkbox('av', 'av') }} {{trans('interface.buy_tcAccept')}}
 
-    <p>{{ Form::submit(trans('interface.form_order'), array('class'=>'', 'id' => 'submit'))}}</p>
+    <p>{{ Form::submit(trans('interface.form_order'), array('style'=>'width: 220px;', 'id' => 'submit'))}}</p>
 {{ Form::close() }}
 
 </div></section>

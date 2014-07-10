@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'email-smtp.us-east-1.amazonaws.com',
+	'host' => 'mail.dualdev.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'info@evatool.nl', 'name' => 'EvaTool'),
+	'from' => array('address' => 'info@mining-certificates.com', 'name' => 'Mining Certificates'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'AKIAJO6OXBG7VWRVQOYQ',
+	'username' => 'info@mining-certificates.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'AockKs2UiOH1LCJwtHZ9WO29yIV+lB5fKi/9K3UWPpx6',
+	'password' => 'FY3A9c',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 
 <!--Page Title-->
-<title>{{trans('interface.title')}}</title>
+<title>{{trans('interface.title')}} - {{trans('interface.header_slogan')}}</title>
 
 <!--Device Width Check-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>

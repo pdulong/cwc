@@ -14,10 +14,13 @@
 Route::group(array('prefix' => LaravelLocalization::setLocale()), function(){
 	Route::pattern('id', '[0-9]+');
 
-	Route::get('/', function(){
-	});
+	Route::get('/', array('uses' => 'ProductController@getIndex'));
+	Route::get('av/{language?}', array('uses' => 'ProductController@tandc'));
 
 	Route::controller('products', 'ProductController');
+
+	Route::post('contact', array('uses' => 'HomeController@doContact'));
+
 	Route::controller('orders', 'OrderController');
 
 	Route::get('login/{intended?}', array('uses' => 'LoginController@showLogin'));

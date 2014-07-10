@@ -8,19 +8,25 @@
 <!--Start of Header Logo-->
 <div id="logo" class="two_thirds">
 <hgroup>
-<h1><img src="{{ URL::asset('images/logo.png') }}" alt="{{trans('interface.header_title')}}" title="Go to homepage" height="41" width="41">{{trans('interface.header_title')}}</h1>
-<h2>{{trans('interface.header_slogan')}}</h2>
+	<h1><img src="{{ URL::asset('images/logo.png') }}" alt="{{trans('interface.header_title')}}" title="Go to homepage" height="41" width="41">{{trans('interface.header_title')}}</h1>
+	<h2>{{trans('interface.header_slogan')}}</h2>
 </hgroup>
 </div>
 <!--End of Header Logo-->
 
 <!--Start of Social Elements-->
 <aside id="social_elements" class="one_third last">
-<ul>
-<li><a class="twitter" target="_blank" title="Twitter" href="http://www.twitter.com/WavePumpCapital"><span>Twitter</span></a></li>
-<li><a class="facebook" target="_blank" title="Facebook" href=""><span>Facebook</span></a></li>
-</ul>
+    <ul class="language_bar_chooser">
+	    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+	        <li>
+	            <a rel="alternate" hreflang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
+	                <img src="{{asset('images/flags/' . $localeCode .'.png')}}" alt="{{{ $properties['native'] }}}" />
+	            </a>
+	        </li>
+	    @endforeach
+	</ul>
 </aside>
+
 <!--End of Social Elements-->
 
 </div>
@@ -30,6 +36,8 @@
 <!--Start of Main Content-->
 <article role="main">
 <div id="main_content">
+
+<div id="backHome"><a href="{{URL::to('/')}}">{{trans('interface.backHome')}}</a></div>
 
 @yield("content")
 

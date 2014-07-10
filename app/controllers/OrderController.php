@@ -264,12 +264,11 @@ class OrderController extends BaseController{
 						'lastname' => Auth::user()->lastname,
 					);
 
-					/*
-Mail::queue('emails.new_affiliate', $emailData, function($message) use ($userAffiliated){
+					Mail::queue('emails.new_affiliate', $emailData, function($message) use ($userAffiliated){
 						$message->to($userAffiliated->email, $userAffiliated->firstname . ' ' . $userAffiliated->lastname)
 							->subject('['.trans('interface.companyName').'] ' . trans('interface.email_newRefSub'));
 					});
-*/
+
 
 				}
 			}

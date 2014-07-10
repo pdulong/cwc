@@ -14,14 +14,18 @@ class ProductController extends BaseController{
 
 		return View::make('products', array(
 			'cheapestPrice'	=> $mainPrice,
-			'thisMonthRev' => 2019,
+			'thisMonthRev' => 1680,
 		))->with('products', $products);
+	}
+
+	public function tandc( $language = 'en' )
+	{
+		return View::make('av_' . $language);
 	}
 
 	public function getProduct( $id = 1 ){
 
 		//$data['products'] = Product::lists('nameSlug', 'id');
-
 
 	}
 

@@ -7,7 +7,8 @@
 		"laravel/framework": "4.2.*",
 		"mollie/mollie-api-php": "1.1.*",
 		"stripe/stripe-php": "dev-master",
-		"mcamara/laravel-localization": "0.14.*"
+		"mcamara/laravel-localization": "0.14.*",
+		"caouecs/laravel4-lang": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

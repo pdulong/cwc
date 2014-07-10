@@ -35,7 +35,7 @@ body {
 margin:0;
 padding:0;
 background:#ffffff;
-font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+font-family: 'Open Sans', Helvetica, Tahoma, Arial , sans-serif;
 color:#333;
 -webkit-font-smoothing: antialiased;
 }
@@ -1630,7 +1630,7 @@ table tr.favorite td{
 	width: 129px;
 	float: left;
 }
-.fieldRow input,.fieldRow select{
+.fieldRow input,.fieldRow select, .fieldRow textarea{
 	color:#6d6c6c;
 	border:1px solid #d3d3d3;
 	border-radius:5px;
@@ -1645,9 +1645,21 @@ table tr.favorite td{
 
 	width: 160px;
 }
+.fieldRow textarea{
+	font-family: 'Open Sans', Helvetica, Tahoma, Arial , sans-serif;
+	font-size:1em;
+	width: 328px;
+}
 .fieldRow input.large{
 	width: 280px;
 }
 .clear{
 	clear: both;
+}
+#backHome{
+	margin: 0 auto;
+	padding-top: 14px;
+    overflow: hidden;
+    text-align: right;
+    width: 940px;
 }

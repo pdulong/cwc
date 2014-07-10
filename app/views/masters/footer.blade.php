@@ -16,29 +16,6 @@
     @endforeach
 </ul>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-
-		// initialize: switcher component
-		jQuery('#switcher-light').switcher();
-
-		// click; toggle switcher dropdown
-		jQuery('#switcher-light .selected, #switcher-light .toggleControl').bind('click', function(e) {
-			// prevent selected options' link from loading
-			e.preventDefault();
-
-			jQuery('#switcher-light').switcher('toggle');
-		});
-
-		// hide switcher dropdown if clicked anywhere outside its' region
-		jQuery('#switcher-light').region('click', function(e, inside) {
-			if(!inside) {
-				jQuery('#switcher-light').switcher('show', false);
-			}
-		});
-
-	});
-	</script>
 
 <p>
 &copy; {{trans('interface.copyright')}}
