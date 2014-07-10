@@ -17,7 +17,7 @@
 			    data-currency="{{ $currency }}"
 			    data-name="CryptoWaveCapital"
 			    data-description="Mining Certificate Purchase"
-			    data-image="/128x128.png">
+			    data-image="{{URL::asset('images/128.png')}}">
 			</script>
 		</form>
 	</p>

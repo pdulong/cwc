@@ -8,7 +8,7 @@
 <!--Start of Header Logo-->
 <div id="logo" class="two_thirds">
 <hgroup>
-	<h1><img src="{{ URL::asset('images/logo.png') }}" alt="{{trans('interface.header_title')}}" title="Go to homepage" height="41" width="41">{{trans('interface.header_title')}}</h1>
+	<h1><img src="{{ URL::asset('images/logo.png') }}" alt="{{trans('interface.header_title')}}" title="Go to homepage" height="41" width="84">{{trans('interface.header_title')}}</h1>
 	<h2>{{trans('interface.header_slogan')}}</h2>
 </hgroup>
 </div>

@@ -1,7 +1,7 @@
 
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="{{App::getLocale()}}">
+<head prefix="og: http://ogp.me/ns#">
 <meta charset="utf-8">
 
 <!--Page Title-->
@@ -15,7 +15,8 @@
 <meta name="description" content="{{trans('interface.metaDesc')}}">
 
 <!--Favicon-->
-<link rel="shortcut icon" href="{{ URL::asset('favicon.ico') }}" title="Favicon" />
+<link rel="shortcut icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon">
 
 <!--Fixes for Internet Explorer CSS3 and HTML5-->
 <!--[if gte IE 9]>
@@ -59,8 +60,40 @@ $(document).ready(function(){
 });
 </script>
 
-<meta property="og:title" content="{{trans('interface.title')}}" />
+<meta property="og:locale" content="en_US">
+
+<meta property="og:title" content="{{trans('interface.title')}} - {{trans('interface.header_slogan')}}">
 <meta property="og:description" content="{{trans('interface.fbShareDialog')}}" />
-<meta property="og:image" content="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-prn1/851565_496755187057665_544240989_n.jpg" />
+
+<link rel="canonical" href="http://www.mining-certificates.com">
+<meta property="og:url" content="http://www.mining-certificates.com">
+
+<meta property="og:image" content="{{URL::asset('images/stock1_square.jpg')}}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="625">
+<meta property="og:image:height" content="625">
+
+<meta property="og:image" content="{{URL::asset('images/stock2.jpg')}}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1732">
+<meta property="og:image:height" content="1155">
+
+<meta property="og:image" content="{{URL::asset('images/stock4.png')}}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="288">
+<meta property="og:image:height" content="266">
+
+<meta property="og:image" content="{{URL::asset('images/stock1.jpg')}}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1655">
+<meta property="og:image:height" content="1155">
+
+<meta property="og:image" content="{{URL::asset('images/stock3.png')}}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="330">
+<meta property="og:image:height" content="225">
+
+<meta property="og:type" content="website"/>
+<meta property="fb:app_id" content="332594696892411">
 
 </head>

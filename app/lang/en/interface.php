@@ -4,9 +4,9 @@ return array(
 
 	'companyName'              => 'CryptoWaveCapital',
 	'title'                    => 'Mining Certificate',
-	'metaDesc'                 => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut interdum massa.',
-	'metaKeywords'             => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut interdum massa.',
-	'fbShareDialog'            => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut interdum massa.!',
+	'metaDesc'                 => 'Earn money online! Make your decision today to profit from our Mining Certificates. Be part of the technology that will reinvent financial transactions and investing. Invest now starting from €60!',
+	'metaKeywords'             => 'investing, crypto, cryptocurrencies, certificates, megahash, scrypt, mining, money, economies of scale, professional, service, bitcoin, litecoin, crowdfund',
+	'fbShareDialog'            => 'Earn money online! Make your decision today to profit from our Mining Certificates. Be part of the technology that will reinvent financial transactions and investing. Invest now starting from €60!',
 
 	'productName_mc1'          => 'Single',
 	'productName_mc2'          => 'Bundle pack',
