@@ -199,6 +199,7 @@
                     <h2>{{trans('interface.hp_who_title')}}</h2>
                     <p>{{trans('interface.hp_who_desc_1')}}</p>
                     <p>{{trans('interface.hp_who_desc_2')}}</p>
+                    <p style="text-align:center;"><img src="{{URL::asset('images/web300.png')}}" alt="{{ trans('interface.companyName') }}" width="300" /></p>
                 </div>
 
                 <div class="one_half last">
